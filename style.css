@@ -1,0 +1,2119 @@
+/*!
+Theme Name: stankecom
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: stankecom
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+stankecom is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	color: #2D2A2A;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+	display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+	background-color: transparent;
+}
+* {
+	outline:none !important;
+}
+a:focus{outline:none;}
+a {outline:none;}
+* {outline:none;}
+
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+	border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+	vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+	display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+	display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+	display: none;
+}
+
+/* Box sizing
+--------------------------------------------- */
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Elements
+--------------------------------------------- */
+body {
+	background: #fff;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/*ul,*/
+/*ol {*/
+/*	margin: 0 0 1.5em 3em;*/
+/*}*/
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+
+
+
+
+a:hover,
+a:focus,
+a:active {
+	color: #F49B52;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+a{
+	color: #357466;
+}
+/* Forms
+--------------------------------------------- */
+
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #648D8B;
+	border: none;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Navigation
+--------------------------------------------- */
+.main-navigation {
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main
+.posts-navigation,
+.site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+}
+
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+	display: flex;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+
+/* Posts and pages
+--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	/* margin: 0 0 1.5em; */
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* Widgets
+--------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Media
+--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+	border: none;
+}
+
+.custom-logo {
+	border: 1px !important;
+}
+
+/* Captions
+--------------------------------------------- */
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+
+
+
+
+
+/*_______________________________
+____________MY STYLES____________
+_________________________________ */
+.text-right {
+	text-align: right;
+}
+
+li{
+	margin:0;
+	padding: 0;
+	text-indent: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/*КНОПКА*/
+.btn-modal {
+	color: #FFF;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+	border-radius: 50px;
+	background: #F49B52;
+	border: unset;
+	padding: 14px 35px;
+	transition: 0.4s ease-in-out;
+}
+.btn-modal:hover {
+	background: #357466;
+	transform: scale(1.1);
+	transition: 0.4s ease-in-out;
+}
+
+
+.logo-section {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.num-description {
+	padding: 0;
+    margin: 0;
+    color:  #2D2A2A;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.phone-num {
+	font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #357466;
+}
+.num-block {
+	display: flex;
+	flex-direction: column;
+}
+.h-logo{ justify-content: start;}	
+
+.h-num{ justify-content: center;}	
+
+.h-butt {
+	justify-content: end;
+}	
+.phone-num:hover{
+	color: #F49B52;
+	transition: 0.4s ease-in-out;
+}
+.h-navigation {
+	background: #357466;
+}
+
+.nav-menu {
+	justify-content: space-between;
+}
+
+.main-navigation li a {
+	padding: 15px 5px;
+	transition: 0.4s ease-in-out;
+	color: #FFF;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+
+.main-navigation li a:hover {
+	/* background: #fff; */
+	color: #F49B52;
+	transition: 0.4s ease-in-out;
+	transform: scale(1.1);
+}
+
+
+.categories {
+	padding-top: 120px;
+    padding-bottom: 120px;
+    background: url('./wp-content/uploads/2023/11/Mask-group.png');
+	background-position: bottom;
+    background-size: cover;
+}
+
+
+.main-navigation:first-child {
+	display: flex;
+    flex-direction: column;
+}
+
+.menu-toggle {
+	background: unset;
+    border: unset;
+    color: #fff;
+    font-size: 24px;
+}
+
+.form-container {
+	margin: 20px 0;
+}
+
+
+.wpcf7-form-control-wrap {
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+	width: 75%;
+}
+
+input[type="submit"].wpcf7-submit {
+	color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background: #F49B52;
+    border: unset;
+    padding: 10px 15px;
+    transition: 0.4s ease-in-out;
+    width: 165px;
+}
+
+
+input[type="submit"].wpcf7-submit:hover {
+	background: #357466;
+	transition: 0.4s ease-in-out;
+}
+
+
+.wpcf7-spinner {
+	border: unset;
+	background: unset;
+}
+
+.wpcf7-form-control {
+	border: 1px solid #F49B52 !important;
+}
+.wpcf7-form-control:active {
+	border: 1px solid #357466 !important;
+}
+
+
+/* КАТЕГОРИИ*/
+
+ .products div {
+	 background-color: #fff;
+ }
+
+.product-category.product:hover {
+	border: 3px solid #F49B52;
+	box-shadow: 0px 10px 10px 0px rgba(244, 155, 82, 0.20);
+	transition: 0.4s ease-in-out;
+} 
+
+.woocommerce div.products div.product a {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    height: 460px;
+    justify-content: space-between;
+}
+
+.woocommerce-loop-category__title {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	font-size: 20px;
+	cursor: pointer;
+	color: #357466;
+    font-family: Montserrat;
+    font-weight: 700;
+    text-transform: uppercase;
+	transition: 0.4s ease-in-out;
+}
+
+.woocommerce-loop-category__title:hover {
+	transition: 0.4s ease-in-out;
+}
+
+.woocommerce-loop-category__title::after {
+    content: 'Подробнее';
+    display: block;
+    text-align: center;
+	border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: #357466;
+    color: #fff;
+	font-size: 14px;
+    padding: 12px 18px;
+    transition: background-color .3s;
+    margin-top: 20px;
+}
+
+.woocommerce-loop-category__title:hover .woocommerce-loop-category__title::after{ 
+	transition: 0.4s ease-in-out;
+	transform: scale(1.1);
+}
+
+mark.count {
+	display: none;
+}
+
+
+.woocommerce ul.products li.product a img {
+	height: 260px;
+	object-fit: contain;
+}
+
+
+.product-category{
+	transition: 1s ease-in-out;
+}
+
+.product-category:hover {
+	transition: 1s ease-in-out;
+	background: url('./wp-content/uploads/2023/11/Frame-18-1.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.product-category:active {
+	transition: 1s ease-in-out;
+	background: url('./wp-content/uploads/2023/11/Frame-18-1.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.product-category:focus {
+	transition: 1s ease-in-out;
+	background: url('./wp-content/uploads/2023/11/Frame-18-1.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.site-footer {
+	background: url('./wp-content/uploads/2023/11/Mask-group-2.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+div#tab-title-description {
+	display: none;
+}
+.product_meta {
+	display: none;
+}
+.term-description {
+	padding-top: 18px;
+}
+.search__border{
+	justify-content: space-between;
+}
+.about{
+	padding-top: 120px;
+	padding-bottom: 182px;
+	background: url("./wp-content/uploads/2023/11/begraund2.png") no-repeat center top /cover;
+}
+.about-h{
+	padding-bottom: 29px;
+	color: #357466;
+	font-size: 50px;
+	font-weight: 700;
+}
+.company__left p{
+	color: #2D2A2A;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 142.4%;
+}
+.company__right p {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 142.4%;
+}
+.company__h1{
+	padding-bottom: 29px;
+}
+.company__right_top{
+	padding-bottom: 53px;
+}
+/* service */
+.card__item_list{
+	margin-bottom: 37px;
+}
+.service {
+    background-color: #F3F8F8;
+	padding: 90px 0 45px 0;
+    background: url("./wp-content/uploads/2023/11/begraund3.png") no-repeat center top /cover;
+}
+.title_h2{
+	font-family: Montserrat;
+	color: #357466;
+	font-size: 35px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.service__p{
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 142.4%;
+	padding-top: 39px;
+	padding-bottom: 66px;
+}
+.service img{
+    width: 60px;
+    height: 60px;
+    transition: all 2s;
+}
+.service_card__body {
+    padding: 67px 25px;
+}
+
+.card__list {
+    box-shadow: 0 4px 10px 0 rgba(53, 116, 102, 0.50);
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.card__title{
+	font-family: Montserrat;
+	text-transform: uppercase;
+     color: #357466;
+     font-size: 19px;
+     font-weight: 700;
+    padding-top: 15px;
+    transition: all .5s;
+ }
+
+.card__list {
+    box-shadow: 0 4px 10px 0 rgba(53, 116, 102, 0.50);
+    border-radius: 50px;
+    height: 260px;
+    width: 260px;
+    background-color: white;
+}
+.card__item {
+	margin-bottom: 45px;
+}
+
+.card_promo:hover .card__title {
+	color: #F49B52;
+}
+.card_promo:hover .service__vector1 {
+	transition: transform .5s;
+	transform: scale(1.1);
+	content: url("./wp-content/uploads/2023/11/Vectoryellow.png");
+}
+
+.card_promo:hover .service__vector2 {
+	transition: transform .5s;
+	transform: scale(1.1);
+	content: url("./wp-content/uploads/2023/11/Vectoryellow2.png");
+}
+
+.card_promo:hover .service__vector3 {
+	transition: transform .5s;
+	transform: scale(1.1);
+	content: url("./wp-content/uploads/2023/11/Vectoryellow3.png");
+}
+
+.card_promo:hover .service__vector4 {
+	transition: transform .5s;
+	transform: scale(1.1);
+	content: url("./wp-content/uploads/2023/11/Vectoryellow4.png");
+}
+.card_promo:hover{
+	position: relative;
+	outline: 3px solid #F49B52;
+	box-shadow: 0 5px 10px 0 rgba(244, 155, 82, 0.20);
+}
+.card_promo:active{
+	position: relative;
+	outline: 3px solid #F49B52;
+	box-shadow: 0 5px 10px 0 rgba(244, 155, 82, 0.20);
+}
+.card_promo:focus{
+	position: relative;
+	outline: 3px solid #F49B52;
+	box-shadow: 0 5px 10px 0 rgba(244, 155, 82, 0.20);
+}
+
+
+.brands{
+	background: url("./wp-content/uploads/2023/11/begraund4.png") no-repeat center top /cover;
+	padding: 45px 0;
+}
+.brands__title_h2{
+	padding-bottom: 20px ;
+}
+.brands__stanke{
+	margin: 22px 0;
+}
+.brands_card__list {
+	display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.brands_card__body{
+	padding: 23px 41px;
+}
+.brands__h2{
+	font-size: 25px;
+	padding: 30px 0;
+}
+.brands_card__body p{
+	color: #2D2A2A;
+	font-size: 18px;
+	font-weight: 500
+}
+.brands .row{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.news{
+	padding: 70px 0;
+	background: url("./wp-content/uploads/2023/11/begraund5.png") no-repeat center top /cover;
+}
+.news_title_h2{
+	padding: 30px 0;
+}
+
+.wpcp-carousel-wrapper #sp-wp-carousel-free-id-70.wpcp-post-carousel .wpcp-single-item {
+    background: #ffffff;
+    height: 560px;
+    padding: 25px 18px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px 0px rgba(53, 116, 102, 0.50);
+}
+.wpcp-post-content{
+	-webkit-line-clamp: 9;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.swiper-slide {
+	padding: 10px;
+}
+
+.slider-text {
+	text-transform: uppercase !important;
+}
+
+
+.wpcp-carousel-section .wpcp-single-item img {
+	border-radius: 6px;
+}
+
+.wpcp-post-carousel .wpcp-single-item .wpcp-all-captions {
+	padding: 5px 5px 0;
+}
+.wpcp-post-title a{
+	color: #357466;
+	font-size: 24px;
+	font-weight: 700;
+	font-family: 'Montserrat';
+}
+.wpcp-all-captions{
+	font-family: 'Montserrat';
+	color: #357466;
+	font-size: 18px;
+	font-weight: 500;
+}
+.wpcp-single-item h2 a {
+	color: #357466;
+	text-decoration: none;
+}
+.wpcp-post-carousel .wpcp-all-captions p {
+	margin-bottom: 15px;
+	font-size: 16px;
+	line-height: 16px;
+}
+.search-form{
+	border: 3px solid #357466;
+    border-radius: 50px;
+    padding: 7px 17px;
+    align-items: center;
+}
+.search-field{
+	outline: none;
+	width: 90%;
+}
+.search-submit{
+    padding: 4px 14px 4px;
+    background: url(./wp-content/uploads/2023/11/search.png) no-repeat;
+    border: none;
+}
+footer a{
+	font-family: 'Montserrat';
+	color: #357466;
+	font-size: 18px;
+	font-weight: 700;
+}
+footer p{
+	font-family: 'Montserrat';
+	color: #357466;
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+footer li:not(:last-child){
+	padding-bottom: 15px;
+}
+.footer__spb{
+	padding-bottom: 15px;
+}
+.footer__mcs{
+	padding-bottom: 15px;
+}
+.footer__spb a{
+	font-weight: 500;
+}
+.footer__mcs a{
+	font-weight: 500;
+}
+.n2-font-a30e5cdbd9ac8969a302e837e4e44b93-hover{
+	line-height: 1;
+}
+@media (max-width: 768px) {
+	.search-form{
+		margin:10px
+	}
+}
+.btn:hover{
+	background-color: #49a18d;
+}
+.btn:active{
+	background-color: #295b50;
+}
+.btn:focus{
+	background-color: #234b42;
+}
+.wc-block-grid__products {
+	margin: 0 !important;
+}
+.categories__page{
+	background: url(./wp-content/uploads/2023/11/begraund-categoria-page.png) no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	padding-top: 1px;
+	padding-bottom: 80px;
+}
+.page_text {
+	color: #2D2A2A;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 500;
+}
+.contact__page a{
+	color:#357466;
+	font-family: Montserrat;
+	font-size: 22px;
+	font-weight: 500;
+	transition: transform .4s;
+}
+.contact__page a:hover{
+	color:#F49B52;
+}
+.title__about{
+	color: #357466;
+	font-size: 25px;
+	font-family: Montserrat;
+	font-weight: 700;
+}
+.title__subheadings{
+	/*font-size: 25px;*/
+}
+.about_company img{
+	width: 100%;
+}
+.about_company__allocation{
+	background-color: #357466;
+	color: #fff;
+	font-weight: 700;
+	padding: 25px;
+	text-align: center;
+}
+.news__blocks{
+	padding: 15px 0;
+}
+.news__block{
+	display: flex;
+	box-shadow: 0 4px 10px 0 rgba(53, 116, 102, 0.50);
+	border-radius: 30px;
+	padding: 20px;
+}
+
+.news__imgData{
+	padding-right: 30px;
+	display: flex;
+	flex-direction: column;
+	color: #357466;
+}
+.post-thumbnail{
+	width: 350px;
+}
+.news__text{
+	margin: 0!important;
+}
+.news__verbose{
+	color: #357466;
+}
+#sp-wp-carousel-free-id-230.sp-wpcp-230 .wpcp-single-item{
+	border: 0 !important;
+}
+.wpcp-carousel-section .wpcp-single-item img {
+	height: 182px!important;
+	object-fit: cover;
+}
+.entry-header a{
+	color:#357466;
+	font-family: Montserrat;
+	font-size: 25px;
+	font-weight: 500;
+	transition: transform .4s;
+}
+.entry-content a{
+	color: #3f8a79;
+	font-family: Montserrat;
+	font-size: 22px;
+	font-weight: 500;
+	transition: transform .4s;
+}
+.wp-block-separator{
+	border-color: #357466;
+}
+.page-numbers {
+	padding: 10px;
+	border-radius: 8px;
+	background-color: #357466;
+	color: #fff;
+}
+.page-numbers:hover{
+	color: #fff;
+}
+.page-numbers:active{
+	color: #fff;
+}
+.page-numbers:focus{
+	color: #fff;
+}
+.current {
+	background-color: #f49b52;
+}
+.pagination{
+	display: flex;
+	justify-content: center;
+	margin: 30px 0;
+}
+.nav-previous{
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
+}
+.nav-next{
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
+}
+
+.menu-toggle{
+	height: 55px;
+}
+.cat-p-o {
+	margin: 15px 0px;
+}
+.products div {
+	background-color: unset;
+}
+.cat-p-in {
+	padding: 50px;
+	height: 100%;
+	text-align: center;
+}
+.product-category.product {
+	border: 3px solid transparent;
+	transition: 0.4s ease-in-out;
+	box-shadow: 0 4px 10px 0 rgba(53, 116, 102, 0.50);
+	border-radius: 50px;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+}
+.categories-vibrogaltovca{
+	background: none !important;
+}
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+	display: none !important;
+}
+.services__text{
+	text-align: center;
+}
+.equipment-demonstration-img{
+	width: 100%;
+}
+.equipment-demonstration-grey{
+	color: #818181;
+}
+.list__processing li {
+	list-style: disc;
+}
+.commissioning__img{
+	float: right;
+	margin-left: 10px;
+}
+.third-party__img{
+	float: left;
+	margin-right: 15px;
+}
+.tumbling_img{
+	float: left;
+	font-size: 70%;
+	width: 30%;
+	margin-right: 5px;
+}
+.processing__link_outline {
+	padding: 13px;
+	border: 3px solid #e9e9e9;
+	margin-bottom: 15px;
+	border-radius: 30px;
+	text-align: center;
+}
+.processing__link_outline a{
+	font-size: 18px;
+}
+.processing__link_outline:hover {
+	text-decoration: none;
+	color: #2e6458;
+	border: 3px solid #357466;
+
+}
+.posted-on{
+	display: none;
+}
+.about_page{
+	display: flex;
+	flex-direction: row-reverse;
+}
+.img_right{
+	float: right;
+	color: #6b7573;
+	font-size: 13px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 10px;
+	width: 25%;
+}
+.img_left{
+	float: left;
+	margin-right: 2%;
+	color: #6b7573;
+	font-size: 13px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 10px;
+	width: 25%;
+}
+.img_left img {
+	width: 100%;
+}
+.img_right img{
+	width: 100%;
+}
+.img_center{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #6b7573;
+	font-size: 13px;
+	padding-bottom: 10px;
+}
+.product-item {
+	margin-bottom: 25px;
+}
+a.button.product_type_simple {
+	color: #FFF;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+	border-radius: 50px;
+	background: #357466;
+	border: unset;
+	padding: 14px 35px;
+	transition: 0.4s ease-in-out;
+}
+.product__outline{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: 0.4s ease-in-out;
+	box-shadow: 0 4px 10px 0 rgba(53, 116, 102, 0.50);
+	border-radius: 50px;
+	height: 100%;
+	padding: 25px;
+	border: 3px solid transparent;
+}
+a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.product__outline:hover {
+	border: 3px solid #F49B52;
+	box-shadow: 0px 10px 10px 0px rgba(244, 155, 82, 0.20);
+	transition: .4s ease-in-out;
+}
+.product__outline:hover a.button.product_type_simple {
+	background-color: #F49B52;
+	transition: all .4s;
+}
+.product__outline:hover h2.woocommerce-loop-product__title {
+	color: #F49B52;
+	transition: all .4s;
+}
+h2.woocommerce-loop-product__title {
+	display: flex;
+	justify-content: center;
+}
+img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+	width: 230px;
+}
+.woocommerce-info, .woocommerce-noreviews, p.no-comments {
+	display: none;
+}
+.page_text  h1 , h2 , h3 , h4 , h5 , strong , b {
+	color: #357466;
+	font-weight: 600;
+}
+.cat__main_content{
+	background-color: #f3f8f8;
+	padding: 15px 0;;
+	font-size: 18px;
+}
+a.woocommerce-product-gallery__trigger {
+	display: none;
+}
+.text__product ul, ol{
+	margin: 0;
+}
+.text__product h2{
+	text-align: center;
+	font-weight: 700;
+	font-size: 30px;
+	color: #357466;
+}
+.page__product {
+	padding-top: 30px;
+}
+.text__product{
+	color: #2D2A2A;
+	font-family: Montserrat;
+	font-size: 19px;
+	font-weight: 500;
+}
+h1.product_title.entry-title {
+	text-align: center;
+	color: #357466;
+	font-weight: 700;
+	font-size: 40px;
+	margin: 0 0 30px 0;
+}
+.img__product {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.woocommerce-product-gallery__wrapper {
+	display: flex;
+	justify-content: center;
+}
+.img__product button.btn.btn-primary.btn-modal {
+	margin: 30px;
+	width: 50%;
+}
+img.wp-post-image {
+	width: 520px;
+}
+.top__product {
+	padding: 20px 0;
+}
+.cat-p-in img{
+	width: 100%;
+	height: 55%;
+	object-fit: contain;
+}
+.brands__h2 a:hover{
+	color: #F49B52;
+	transition: 0.4s ease-in-out;
+}
+footer a:hover{
+	color: #F49B52;
+	transition: 0.2s ease-in-out;
+}
+.gromila img{
+	height: 340px;
+}
+.infal_in {
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.infal_in h3{
+	text-align: center;
+}
+.processing__link_outline a:hover{
+	color: #357466;
+}
+/*govnocode*/
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+
+
+p, h1, h2, h3, h4, h5, h6 {
+	cursor: default;
+}
+
+
+
+@media (max-width: 991px) {
+	.footer__menu{
+		display: none;
+	}
+}
+@media (max-width: 991px) {
+	.footer-logo{
+		display: flex;
+		justify-content: center;
+		padding-bottom: 30px;
+	}
+	.footer__links{
+		text-align: center;
+	}
+	.tumbling_img {
+		float: none;
+		width: 80%;
+	}
+}
+@media (max-width: 404px){
+	.title_h2{
+		font-size: 25px;
+	}
+	.title__about {
+		font-size: 18px;
+	}
+	.page_text{
+		font-size: 16px;
+	}
+}
+@media (max-width: 991px) {
+	.news__block {
+		flex-direction: column;
+	}
+	.news__blocks .title__about{
+		font-size: 25px;
+	}
+	.news__text{
+		font-size: 17px;
+	}
+	.entry-title {
+		font-size: 30px;
+	}
+	.site-footer {
+		background-color: #f3f8f8;
+	}
+}
+@media (max-width: 380px) {
+	.post-thumbnail {
+		width: 250px;
+	}
+	.news__blocks .title__about{
+		font-size: 20px;
+	}
+	.news__text{
+		font-size: 16px;
+	}
+	.entry-title {
+		font-size: 26px;
+	}
+}
+@media screen and (max-width: 768px) {
+
+	.h-logo{
+		justify-content: center;
+	}
+
+	.h-num{
+		justify-content: center;
+		margin: 20px auto;
+	}
+
+	.h-butt {
+		justify-content: center;
+	}
+
+
+	.num-description { text-align: center;}
+	.phone-num { text-align: center;}
+
+
+	.main-navigation li a:hover {
+		transform: scale(1);
+	}
+
+
+	.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+		width: 100%;
+	}
+	.woocommerce div.products div.product a{
+		height: auto;
+	}
+}
+@media (max-width: 767px) {
+	.img_right{
+		float: none;
+	}
+	ul, ol {
+		margin: 1em 0;
+	}
+	.img_left{
+		width: 100%;
+	}
+	.img_right{
+		width: 100%;
+	}
+}
+
+@media (max-width: 455px) {
+	p{
+		margin-bottom: 3%;
+	}
+}
+@media (max-width: 290px) {
+	.woocommerce-loop-category__title {
+		font-size: 15px;
+	}
+}
+@media (max-width: 768px) {
+	.img_right{
+		float: none;
+	}
+	ul, ol {
+		margin: 1em 0;
+	}
+	.img_left{
+		width: 100%;
+	}
+	.img_right{
+		width: 100%;
+	}
+	.brands_card__list .brands_card__body{
+		padding: 0;
+	}
+	.brands_card__list .brands__stanke{
+		margin: 0;
+	}
+	.brands_card__list .brands__h2{
+		padding: 0;
+	}
+	.brands .card__item_list {
+		margin-bottom: 0px;
+	}
+}
+
+@media (max-width: 353px) {
+	.woocommerce-loop-category__title {
+		font-size: 15px;
+	}
+}
+
+.company__left{
+	animation-name: company-ani;
+	animation-duration: 3s;
+
+
+}
+@keyframes company-ani {
+	0% {
+		margin-left: 100%;
+		width: 300%;
+	}
+	100% {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
